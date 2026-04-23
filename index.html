@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div1 {
+        background-color: beige;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+
+    }
+
+    button {
+        height: 30px;
+        width: 150px;
+        background-color: aqua;
+        font-weight: bolder;
+        font-size: large;
+    }
+
+    p {
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    .formcard{
+        margin: 50px;
+    }
+</style>
+
+<body>
+
+    <form class="div1">
+        <fieldset><legend ><h1> Form</h1></legend>
+        <p><label for="name">Name: <input type="text" id="name" required></label></p> <br>
+        <p><label for="name">Fname: <input type="text" id="fname" required></label></p> <br>
+        <p><label for="name">Roll.no: <input type="text" id="rollno" required></label></p> <br>
+   <div style="display: flex; justify-content: space-around;">
+        <button onclick="stuForm()">submit</button>
+        <input type="reset" value="Reset" style="width: 80px;"> 
+     </div>   
+        </fieldset>
+    </form>
+
+    <h2 ><span class="formcard"> FORM DATA</span>
+        <div style="display: flex; align-items: center; gap: 20px;">Name :<p id="cardname"></p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">FName :<p id="cardname2"></p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">rollno :<p id="cardname3"></p>
+        </div>
+
+    </h2>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
