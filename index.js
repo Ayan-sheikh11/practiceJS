@@ -44,13 +44,13 @@
 //    }
 
 //    console.log(aboutMe)
-    
+
 // }
 
 // student('ayan')
 
- function student(name){
-   console.log("skillify",name)
+function student(name) {
+    console.log("skillify", name)
 }
 
 
@@ -69,7 +69,7 @@
 // setInterval(()=>{
 //    console.log(num += 1)
 //    student("Academy")
-   
+
 // },[2000])
 
 // name="Ayan"
@@ -84,7 +84,7 @@
 //       console.log(friendNames[i]);
 
 //    }
-   
+
 // },[2000])
 
 // let num= prompt("please enter a table num")
@@ -100,23 +100,45 @@
 // writeTables()
 
 
-var stuForm = () => { 
+
+// var stuForm = (e) => {
+//     e.preventDefault();
+
+//     var showName = document.getElementById("name").value;
+//     var showFname = document.getElementById("fname").value;
+//     var rollno = document.getElementById("rollno").value;
+
+//     console.log(showName);
+
+//     var storageName = localStorage.setItem("name", showName);
+//     var storageFname = localStorage.setItem("fname", showFname);
+//     var storageRollno = localStorage.setItem("rollno", rollno);
+
+
+// document.getElementById("name").value = "";
+// document.getElementById("fname").value = "";
+// document.getElementById("rollno").value = "";
+
+// }
+
+
+var stuform = (e) => {
+    e.preventDefault();
     var showName = document.getElementById("name").value;
     var showFname = document.getElementById("fname").value;
     var rollno = document.getElementById("rollno").value;
 
-    console.log(showName);
+    console.log(showName , showFname , rollno)
+
+    localStorage.setItem("name", showName);
+    localStorage.setItem("fname", showFname);
+    localStorage.setItem("rollno", rollno);
 
 
-    if ( !showFname || !showName || !rollno){
-        alert("please Fill form")
-        
-    }else{
-            alert("welcome to our page " + showName + " " + showFname);
-   document.getElementById("cardname").innerText = showName  ;
-    document.getElementById("cardname2").innerText = showFname  ;
-    document.getElementById("cardname3").innerText = rollno  ;
-    }
+//  document.getElementById("cardname");   
 
- 
+
+
+    // window.location.href = "form.html"
+
 }
