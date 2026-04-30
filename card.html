@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+
+</style>
+<body>
+    <h1>card</h1>
+    
+<div id="card" class="card">
+    
+</div>
+
+
+<script>
+const cardContainer = document.getElementById("card");
+const data = JSON.parse(localStorage.getItem("students")) || [];
+console.log(data);
+
+if (!Array.isArray(data) || data.length === 0) {
+    cardContainer.innerHTML = '<p>No students saved.</p>';
+} else {
+    data.forEach(function(student) {
+        cardContainer.innerHTML += `
+        <div class="student-card">
+            <h3>${student.name}</h3>
+            <p>${student.email}</p>
+        </div>
+        `;
+
+        console.log(student);
+        console.log(student.email);
+    });
+}
+</script>
+</body>
+</html>
