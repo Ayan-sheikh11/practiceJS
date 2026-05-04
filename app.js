@@ -29,23 +29,49 @@
 
 
 
+// function studentForm(e) {
+//     e.preventDefault();
+//     const name = document.getElementById("name").value
+//     const email = document.getElementById("email").value
+//     const phone = document.getElementById("phone").value
+
+//  var students= JSON.parse(localStorage.getItem("students")) || []
+
+//     var studentdata ={
+//         name: name,
+//         email:email,
+//         phone: phone,
+//     }
+
+//    students.push(studentdata)
+//    localStorage.setItem("students", JSON.stringify(students))
+
+//     var storedStudents = JSON.parse(localStorage.getItem("students"))
+//     console.log("Stored students:", storedStudents )
+
+//     window.location.href = "card.html"
+// }
+
+
 function studentForm(e) {
     e.preventDefault();
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
-    const phone = document.getElementById("phone").value
+    const phone = document.getElementById("phone").value 
+    
+    var students = JSON.parse(localStorage.getItem("students")) || []
 
- var students= JSON.parse(localStorage.getItem("students")) || []
-
-    var studentdata ={
+    var studentdata = {
         name: name,
-        email:email,
+        email: email,
         phone: phone,
     }
+    students.push(studentdata)
+    localStorage.setItem("students", JSON.stringify(students))
 
-   students.push(studentdata)
-   localStorage.setItem("students", JSON.stringify(students))
 
-    var storedStudents = JSON.parse(localStorage.getItem("students"))
-    console.log("Stored students:", storedStudents )
+
+
+
+window.location.href = "card.html"
 }
