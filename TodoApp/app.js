@@ -3,22 +3,107 @@
 
 
 
-function studentForm(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value
-    const email = document.getElementById("email").value
-    const phone = document.getElementById("phone").value
+// function studentForm(e) {
+//     e.preventDefault();
+//     const name = document.getElementById("name").value
+//     const email = document.getElementById("email").value
+//     const phone = document.getElementById("phone").value
 
-    const student = {
-        name: name,
-        email: email,
-        phone: phone
+//     const student = {
+//         name: name,
+//         email: email,
+//         phone: phone
+//     }
+
+//     var students = []
+//     students.unshift(student)
+//     localStorage.setItem("students", JSON.stringify(students))
+
+//     console.log("All students:", students)
+// }
+// // console.log("All students:", students)
+
+
+
+
+
+
+
+// function studentForm(e) {
+//     e.preventDefault();
+//     const name = document.getElementById("name").value
+//     const email = document.getElementById("email").value
+//     const phone = document.getElementById("phone").value
+
+//  var students= JSON.parse(localStorage.getItem("students")) || []
+
+//     var studentdata ={
+//         name: name,
+//         email:email,
+//         phone: phone,
+//     }
+
+//    students.push(studentdata)
+//    localStorage.setItem("students", JSON.stringify(students))
+
+//     var storedStudents = JSON.parse(localStorage.getItem("students"))
+//     console.log("Stored students:", storedStudents )
+
+//     window.location.href = "card.html"
+// }
+
+
+// function studentForm(e) {
+//     e.preventDefault();
+//     const name = document.getElementById("name").value
+//     const email = document.getElementById("email").value
+//     const phone = document.getElementById("phone").value 
+    
+//     var students = JSON.parse(localStorage.getItem("students")) || []
+
+//     var studentdata = {
+//         name: name,
+//         email: email,
+//         phone: phone,
+//     }
+//     students.push(studentdata)
+//     localStorage.setItem("students", JSON.stringify(students))
+
+
+
+
+
+// window.location.href = "card.html"
+// }
+function studentdata(e){
+    e.preventDefault();
+        
+
+    var studName =  document.getElementById("name").value
+    var studEmail =  document.getElementById("email").value
+    var studphone =  document.getElementById("phone").value
+
+    var students = JSON.parse(localStorage.getItem("student")) || []
+    if (!Array.isArray(students)) {
+        students = []
+    }
+ 
+    var studentDataStore = {
+        "name": studName,
+        "email": studEmail,
+        "phone": studphone
     }
 
-    var students = []
-    students.unshift(student)
-    localStorage.setItem("students", JSON.stringify(students))
+    students.push(studentDataStore)
+    localStorage.setItem("student", JSON.stringify(students))
+ 
 
-    console.log("All students:", students)
+        
+
+    console.log(studName , studEmail , studphone)
+
+
+
+
+    window.location.href = "card.html" 
 }
-// console.log("All students:", students)
