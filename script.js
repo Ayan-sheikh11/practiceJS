@@ -26,9 +26,12 @@ console.log("Stored students:", storedStudents);
 storedStudents.forEach(function(students , index) {
     studentdataget.innerHTML += `
        <div class="student-card">
+       <img class="student-image" src="${students.image}" alt="Student Image Not Found">
+       <div class="student-info">
     <p class="student-email">${index + 1}</p>
-            <h3 class="student-name">${students.name}</h3>
-            <p class="student-email">${students.email}</p>
+    <h3 class="student-name">${students.name}</h3>
+    <p class="student-email">${students.email}</p>
+    </div>      
             <p class="student-phone">${students.phone}</p>
             <div class="buttons">
                 <button onclick="editStudent(${index})">Edit</button>

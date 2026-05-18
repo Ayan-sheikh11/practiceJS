@@ -35,3 +35,6 @@ const answer = numbers.find((val , ind , arr)=>{
 
 
 console.log(answer)
+
+
+

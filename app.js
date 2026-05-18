@@ -58,6 +58,7 @@ function studentForm(e) {
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
     const phone = document.getElementById("phone").value 
+    const image = document.getElementById("img").value 
     
     var students = JSON.parse(localStorage.getItem("students")) || []
 
@@ -65,6 +66,7 @@ function studentForm(e) {
         name: name,
         email: email,
         phone: phone,
+        image: image
     }
     students.push(studentdata)
     localStorage.setItem("students", JSON.stringify(students))
